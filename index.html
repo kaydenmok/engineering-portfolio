@@ -1,0 +1,292 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kayden Mokrytzki | Computer Engineering Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">KM</a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">COMPUTER ENGINEERING STUDENT</p>
+
+        <h1>Hi, I'm Kayden.</h1>
+
+        <p class="hero-description">
+          I'm a Computer Engineering student at the University of Guelph
+          with interests in FPGA design, embedded systems, computer architecture,
+          and hardware-software integration.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="button primary-button">View Projects</a>
+
+          <a
+            href="https://github.com/kaydenmok/engineering-portfolio.git"
+            target="_blank"
+            class="button secondary-button"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <p>Technical Focus</p>
+        <h2>FPGA Design, Digital Systems & Embedded Engineering</h2>
+        <span>SystemVerilog • FPGA • Python • C/C++ • Hardware-Software Integration</span>
+    </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <p class="section-label">ABOUT ME</p>
+      <h2>Building things to understand how they work.</h2>
+
+      <p class="section-description">
+        I enjoy learning through hands-on engineering projects, from designing
+        digital hardware on FPGAs to experimenting with machine learning and
+        embedded systems. Outside of engineering, I also enjoy 3D printing,
+        art, and playing piano.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <p class="section-label">PROJECTS</p>
+      <h2>Featured Engineering Work</h2>
+
+      <div class="project-grid">
+
+        <!-- FPGA PROJECT -->
+        <article class="project-card" data-project-url="projects/fpga.html" tabindex="0" role="link" aria-label="View Custom 8-bit FPGA Computer project">
+          <div class="project-image">
+            <video controls preload="metadata" aria-label="Custom 8-bit FPGA computer demonstration video">
+              <source src="videos/UART_calculator_demo.mp4" type="video/mp4">
+              Your browser does not support this video format.
+            </video>
+          </div>
+
+          <div class="project-content">
+            <p class="project-type">FPGA / DIGITAL DESIGN</p>
+
+            <h3>Custom 8-bit FPGA Computer</h3>
+
+            <p>
+              Designed and implemented a custom 8-bit computer in SystemVerilog
+              on a Basys 3 FPGA with a custom CPU, memory system, UART,
+              memory-mapped I/O, stack-based subroutines, and a Python assembler.
+            </p>
+
+            <div class="tags">
+              <span>SystemVerilog</span>
+              <span>Vivado</span>
+              <span>FPGA</span>
+              <span>Python</span>
+              <span>UART</span>
+            </div>
+
+            <a href="projects/fpga.html" class="project-link">
+              View Project →
+            </a>
+          </div>
+        </article>
+
+        <!-- NASA PROJECT -->
+        <article class="project-card" data-project-url="projects/nasa-ml.html" tabindex="0" role="link" aria-label="View NASA Engine Remaining Life Prediction project">
+          <div class="project-image">
+            <img
+              src="images/XGActualVsPredicted.png"
+              alt="Actual versus predicted remaining useful life chart from the NASA engine prediction project"
+            >
+          </div>
+
+          <div class="project-content">
+            <p class="project-type">MACHINE LEARNING</p>
+
+            <h3>NASA Engine Remaining Life Prediction</h3>
+
+            <p>
+              Built a Python machine learning pipeline using NASA C-MAPSS data
+              to predict turbofan remaining useful life using Random Forest,
+              XGBoost, feature engineering, and SHAP analysis.
+            </p>
+
+            <div class="tags">
+              <span>Python</span>
+              <span>XGBoost</span>
+              <span>SHAP</span>
+              <span>Jupyter</span>
+            </div>
+
+            <a href="projects/nasa-ml.html" class="project-link">
+              View Project →
+            </a>
+          </div>
+        </article>
+
+        <!-- MOTOR CONTROL PROJECT -->
+        <article class="project-card" data-project-url="projects/motor-control.html" tabindex="0" role="link" aria-label="View Embedded Motor Control System project">
+          <div class="project-image">
+            <img
+              src="images/TeddyBearWheelChair.png"
+              alt="Small motorized wheelchair prototype used in the embedded motor control project"
+            >
+          </div>
+
+          <div class="project-content">
+            <p class="project-type">EMBEDDED SYSTEMS</p>
+
+            <h3>Embedded Motor Control System</h3>
+
+            <p>
+              Integrated Arduino-based motor control with DC motors and an
+              L298N motor driver as part of a team engineering design project.
+            </p>
+
+            <div class="tags">
+              <span>Arduino</span>
+              <span>Embedded</span>
+              <span>Motor Control</span>
+              <span>Team Design</span>
+            </div>
+
+            <a href="projects/motor-control.html" class="project-link">
+              View Project →
+            </a>
+          </div>
+        </article>
+
+        <!-- JAVA EVENTS BOOKING MANAGER -->
+        <article class="project-card" data-project-url="projects/java-events-booking.html" tabindex="0" role="link" aria-label="View Java Events Booking Manager Application project">
+          <div class="project-image">
+            <img
+              src="images/Java_Events_Booking_Manager.png"
+              alt="Java Events Booking Manager application interface"
+            >
+          </div>
+
+          <div class="project-content">
+            <p class="project-type">JAVA / FRONT-END</p>
+
+            <h3>Java Events Booking Manager</h3>
+
+            <p>
+              Front-end lead for a collaborative Java Swing application, designing
+              user workflows and refining the experience through iterative testing.
+            </p>
+
+            <div class="tags">
+              <span>Java</span>
+              <span>Java Swing</span>
+              <span>Git/GitHub</span>
+              <span>Team Project</span>
+            </div>
+
+            <a href="projects/java-events-booking.html" class="project-link">
+              View Project →
+            </a>
+          </div>
+        </article>
+
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <p class="section-label">SKILLS</p>
+      <h2>Tools & Technologies</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+            <h3>Digital Hardware</h3>
+            <p>
+            SystemVerilog, FPGA Design, Digital Logic, Computer Architecture,
+            UART, Memory-Mapped I/O, Testbenches
+            </p>
+        </div>
+
+    <div class="skill-card">
+        <h3>Programming</h3>
+        <p>
+        Python, C, C++, Java, Git/GitHub
+        </p>
+    </div>
+
+    <div class="skill-card">
+        <h3>Engineering Tools</h3>
+        <p>
+        Vivado, GTKWave, VS Code, Jupyter, Git
+        </p>
+    </div>
+
+    <div class="skill-card">
+        <h3>Machine Learning & Data</h3>
+        <p>
+        XGBoost, Random Forest, SHAP, Pandas, Scikit-learn,
+        Data Preprocessing, Model Evaluation
+        </p>
+    </div>
+    </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+      <p class="section-label">CONTACT</p>
+
+      <h2>Let's connect.</h2>
+
+      <p>
+        I'm currently building my engineering experience and looking for
+        opportunities in hardware, FPGA, embedded systems, and related fields.
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:kaydenmokrytzki@gmail.com">Email</a>
+
+        <a
+          href="https://www.linkedin.com/in/kayden-mokrytzki"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/"
+          target="_blank"
+        >
+          GitHub
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Kayden Mokrytzki</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
