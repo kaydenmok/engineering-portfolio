@@ -17,6 +17,25 @@ document.querySelectorAll(".project-card[data-project-url]").forEach((card) => {
 
 // Keep project-page navigation on the public GitHub Pages site if an older
 // bookmark or cached deployment was opened through the retired .dev address.
-document.querySelectorAll(".back-link").forEach((link) => {
-  link.href = "https://kaydenmok.github.io/engineering-portfolio/#projects";
+const publicSiteUrl = "https://kaydenmok.github.io/engineering-portfolio/";
+
+document.querySelectorAll('a[href^="../index.html"]').forEach((link) => {
+  const originalHref = link.getAttribute("href");
+  const hash = originalHref.includes("#") ? originalHref.slice(originalHref.indexOf("#")) : "";
+  link.href = `${publicSiteUrl}${hash}`;
+});
+
+const pageTitle = document.querySelector(".project-intro h1")?.textContent.trim();
+const additionalProjectSkills = {
+  "Custom 8-bit FPGA Computer": ["Digital Design", "RTL Development", "Verification"],
+  "Embedded Motor Control System": ["Debugging", "Hardware Integration", "Prototyping"],
+};
+
+const projectTags = document.querySelector(".project-intro .tags");
+additionalProjectSkills[pageTitle]?.forEach((skill) => {
+  if (!Array.from(projectTags.children).some((tag) => tag.textContent === skill)) {
+    const tag = document.createElement("span");
+    tag.textContent = skill;
+    projectTags.appendChild(tag);
+  }
 });
