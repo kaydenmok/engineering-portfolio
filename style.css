@@ -254,6 +254,9 @@ header {
 .project-detail { margin-top: 55px; padding: 34px; border: 1px solid #202a35; border-radius: 16px; background: #111820; }
 .project-detail h2 { margin-bottom: 12px; }
 .project-detail p { color: #b8c0ca; }
+.project-detail p + p { margin-top: 16px; }
+.download-button { margin-top: 24px; background: #f3f4f6; color: #0b0f14; }
+.download-button:hover { transform: translateY(-2px); }
 .media-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 30px; }
 .media-gallery figure { margin: 0; }
 .media-gallery img, .media-gallery video { width: 100%; border: 1px solid #28333f; border-radius: 10px; background: #05080c; }
