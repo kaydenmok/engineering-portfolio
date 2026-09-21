@@ -14,3 +14,9 @@ document.querySelectorAll(".project-card[data-project-url]").forEach((card) => {
     }
   });
 });
+
+// Keep project-page navigation on the public GitHub Pages site if an older
+// bookmark or cached deployment was opened through the retired .dev address.
+document.querySelectorAll(".back-link").forEach((link) => {
+  link.href = "https://kaydenmok.github.io/engineering-portfolio/#projects";
+});
