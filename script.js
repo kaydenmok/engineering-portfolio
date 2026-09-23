@@ -39,3 +39,46 @@ additionalProjectSkills[pageTitle]?.forEach((skill) => {
     projectTags.appendChild(tag);
   }
 });
+
+const galleryImages = document.querySelectorAll(".media-gallery img");
+
+if (galleryImages.length) {
+  const imageViewer = document.createElement("dialog");
+  imageViewer.className = "image-viewer";
+  imageViewer.setAttribute("aria-label", "Expanded project image");
+
+  const closeButton = document.createElement("button");
+  closeButton.className = "image-viewer-close";
+  closeButton.type = "button";
+  closeButton.setAttribute("aria-label", "Close expanded image");
+  closeButton.textContent = "×";
+
+  const expandedImage = document.createElement("img");
+  imageViewer.append(closeButton, expandedImage);
+  document.body.append(imageViewer);
+
+  const openImageViewer = (image) => {
+    expandedImage.src = image.currentSrc || image.src;
+    expandedImage.alt = image.alt;
+    imageViewer.showModal();
+    closeButton.focus();
+  };
+
+  galleryImages.forEach((image) => {
+    image.tabIndex = 0;
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-label", `Expand image: ${image.alt}`);
+    image.addEventListener("click", () => openImageViewer(image));
+    image.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openImageViewer(image);
+      }
+    });
+  });
+
+  closeButton.addEventListener("click", () => imageViewer.close());
+  imageViewer.addEventListener("click", (event) => {
+    if (event.target === imageViewer) imageViewer.close();
+  });
+}

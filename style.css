@@ -260,7 +260,14 @@ header {
 .media-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 30px; }
 .media-gallery figure { margin: 0; }
 .media-gallery img, .media-gallery video { width: 100%; border: 1px solid #28333f; border-radius: 10px; background: #05080c; }
+.media-gallery img { cursor: zoom-in; transition: border-color .2s ease, transform .2s ease; }
+.media-gallery img:hover, .media-gallery img:focus-visible { border-color: #8ea6bf; transform: scale(1.015); outline: none; }
 .media-gallery figcaption { color: #8ea6bf; font-size: .9rem; margin-top: 8px; }
+.image-viewer { width: min(94vw, 1400px); max-width: none; max-height: 92vh; padding: 14px; border: 1px solid #425264; border-radius: 14px; background: #111820; color: #f3f4f6; }
+.image-viewer::backdrop { background: rgba(0, 0, 0, .82); backdrop-filter: blur(4px); }
+.image-viewer img { display: block; width: auto; max-width: 100%; max-height: calc(92vh - 28px); margin: 0 auto; object-fit: contain; }
+.image-viewer-close { position: absolute; top: 24px; right: 24px; width: 42px; height: 42px; border: 1px solid #596572; border-radius: 50%; background: rgba(11, 15, 20, .9); color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
+.image-viewer-close:hover, .image-viewer-close:focus-visible { background: #273442; outline: 2px solid #8ea6bf; outline-offset: 2px; }
 
 .project-content {
   padding: 27px;
