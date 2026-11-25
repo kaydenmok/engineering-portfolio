@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rover Motor Drive Board | Kayden Mokrytzki</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header><nav class="navbar"><a href="../index.html" class="logo">KM</a><ul class="nav-links"><li><a href="../index.html#projects">Projects</a></li><li><a href="../index.html#contact">Contact</a></li></ul></nav></header>
+  <main class="project-page">
+    <a class="back-link" href="../index.html#projects">← Back to projects</a>
+    <div class="project-intro">
+      <p class="project-type">ROBOTICS / ELECTRICAL DESIGN · SEPTEMBER 2026–PRESENT</p>
+      <h1>Rover Motor Drive Board</h1>
+      <p>A three-phase BLDC motor drive schematic for the University of Guelph Robotics Team's six-wheel rover.</p>
+      <div class="tags"><span>Altium Designer</span><span>Schematic Design</span><span>BLDC Motor Control</span><span>Power Electronics</span><span>Team Design</span></div>
+    </div>
+    <section class="project-detail">
+      <h2>Project overview</h2>
+      <p>As an electrical team member, I developed a new motor drive-board schematic in Altium Designer for the team's six-wheel rover. The goal is to create a drive board suitable for integration into the rover, building on lessons from a previous board that encountered problems and was scrapped.</p>
+      <p>I used component datasheets and the previous board design as references while working with electrical team members on component selection, gate-drive circuitry, and schematic design. The schematic is complete; the wider board project remains in progress.</p>
+    </section>
+    <section class="project-detail">
+      <h2>Drive circuit design</h2>
+      <p>The schematic uses a DRV8302DCAR gate driver with six PWM inputs and six MOSFETs arranged as three half-bridges for a three-phase brushless DC motor. Developing the circuit involved translating datasheet guidance into a new design while considering how the drive board will fit into the rover system.</p>
+      <div class="media-gallery">
+        <figure><img src="../images/DRVSCHEM.png" alt="Altium schematic showing the DRV8302 gate driver and three-phase six-MOSFET power stage"><figcaption>Drive-board schematic in Altium Designer — click to expand</figcaption></figure>
+      </div>
+    </section>
+  </main>
+  <footer><p>© <span id="year"></span> Kayden Mokrytzki</p></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
