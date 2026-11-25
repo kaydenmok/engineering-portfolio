@@ -17,15 +17,23 @@
       <div class="tags"><span>Altium Designer</span><span>Schematic Design</span><span>BLDC Motor Control</span><span>Power Electronics</span><span>Team Design</span></div>
     </div>
     <section class="project-detail">
+      <h2>Problem I’m solving</h2>
+      <p>The robotics team needs a motor drive board that can be integrated into its six-wheel rover. A previous board encountered problems and was scrapped, so the challenge is to develop a new drive circuit for the rover while using the earlier design and component datasheets as references.</p>
+    </section>
+    <section class="project-detail">
       <h2>Project overview</h2>
-      <p>As an electrical team member, I developed a new motor drive-board schematic in Altium Designer for the team's six-wheel rover. The goal is to create a drive board suitable for integration into the rover, building on lessons from a previous board that encountered problems and was scrapped.</p>
+      <p>As an electrical team member, I developed a new motor drive-board schematic in Altium Designer for the team's six-wheel rover.</p>
       <p>I used component datasheets and the previous board design as references while working with electrical team members on component selection, gate-drive circuitry, and schematic design. The schematic is complete; the wider board project remains in progress.</p>
     </section>
     <section class="project-detail">
       <h2>Drive circuit design</h2>
       <p>The drive board is being designed for a Maytech MTO6365-170-HA-C2 sensored brushless motor, a 170 KV sealed 6365 outrunner with a 10 mm shaft. The motor and board combination has not yet been tested.</p>
       <p>The schematic uses a DRV8302DCAR gate driver with six PWM inputs and six IAUCN04S7L019ATMA1 MOSFETs arranged as three half-bridges for a three-phase brushless DC motor. Developing the circuit involved translating datasheet guidance into a new design while considering how the drive board will fit into the rover system.</p>
-      <p>Key design decisions included simplifying the circuit where practical, incorporating two shunt resistors for current-sensing feedback, and considering an appropriate gate-drive dead time to avoid simultaneous conduction in a half-bridge. Component values and timing will be evaluated as the design progresses; the board has not yet been tested.</p>
+    </section>
+    <section class="project-detail">
+      <h2>Key design decisions</h2>
+      <p>My design work included simplifying the circuit where practical, incorporating two shunt resistors for current-sensing feedback, and considering an appropriate gate-drive dead time to avoid simultaneous conduction in a half-bridge. I also selected provisional resistor and capacitor values using component datasheets and the needs of the circuit.</p>
+      <p>Component values and timing will be evaluated as the design progresses; the board has not yet been tested.</p>
       <div class="media-gallery">
         <figure><img src="../images/DRVSCHEM.png" alt="Altium schematic showing the DRV8302 gate driver and three-phase six-MOSFET power stage"><figcaption>Drive-board schematic in Altium Designer — click to expand</figcaption></figure>
       </div>
