@@ -73,8 +73,8 @@ header {
 .hero {
   max-width: 1150px;
   margin: 0 auto;
-  min-height: 85vh;
-  padding: 90px 30px;
+  min-height: 65vh;
+  padding: 72px 30px;
 
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -159,7 +159,7 @@ header {
 .section {
   max-width: 1150px;
   margin: 0 auto;
-  padding: 100px 30px;
+  padding: 55px 30px;
 }
 
 .section h2 {
@@ -179,7 +179,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  margin-top: 45px;
+  margin-top: 30px;
 }
 
 .project-card {
@@ -247,13 +247,13 @@ header {
   text-align: center;
 }
 
-.project-page { max-width: 950px; margin: 0 auto; padding: 80px 30px 110px; }
-.back-link { display: inline-block; margin-bottom: 48px; color: #b8c0ca; }
+.project-page { max-width: 950px; margin: 0 auto; padding: 60px 30px 75px; }
+.back-link { display: inline-block; margin-bottom: 34px; color: #b8c0ca; }
 .back-link:hover { color: #fff; }
 .project-intro { max-width: 760px; }
 .project-intro h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); line-height: 1.08; margin: 12px 0 22px; }
 .project-intro > p:not(.project-type) { color: #b8c0ca; font-size: 1.12rem; }
-.project-detail { margin-top: 55px; padding: 34px; border: 1px solid #202a35; border-radius: 16px; background: #111820; }
+.project-detail { margin-top: 32px; padding: 34px; border: 1px solid #202a35; border-radius: 16px; background: #111820; }
 .project-detail h2 { margin-bottom: 12px; }
 .project-detail p { color: #b8c0ca; }
 .project-detail p + p { margin-top: 16px; }
@@ -314,6 +314,8 @@ header {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+
+.skill-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 
 .skill-card {
   padding: 25px;
@@ -378,7 +380,8 @@ footer {
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
-    padding-top: 80px;
+    padding: 55px 30px;
+    gap: 35px;
   }
 
   .project-grid,
